@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+	  "start": "node ./src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/SigurdMW/nd-documentation-concept/issues"
   },
-  "homepage": "https://github.com/SigurdMW/nd-documentation-concept#readme"
+  "homepage": "https://github.com/SigurdMW/nd-documentation-concept#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
