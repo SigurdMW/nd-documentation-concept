@@ -23,12 +23,12 @@ jobs:
     - name: Login to Heroku
       env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-      run: heroku container:login
-    - name: Build and publish
+      run: heroku login
+    - name: Add existing remote to Heroku
       env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-      run: heroku container:push -a ${{ secrets.APP_NAME }} web
-    - name: Release
+      run: heroku git:remote -a ${{ secrets.APP_NAME }}
+    - name: Push changes to Heroku
       env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-      run: heroku container:release -a ${{ secrets.APP_NAME }} web
+      run: git push heroku master
