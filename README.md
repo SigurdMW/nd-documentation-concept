@@ -3,6 +3,9 @@ Documentation concept for Norsk Display that generates PDF files and HTML from m
 
 ## Setting up Github Actions
 w/Heroku: https://github.com/actions/heroku/issues/10
+Docker: https://wwachira.hashnode.dev/how-to-create-a-node-app-within-a-docker-container-cjvzdbl7h001lc3s1k6sofdi3
+https://hn.werick.codes/how-to-host-your-node-app-in-a-docker-container-on-heroku-cjwzf5w6q000r3ws1p647ks7m
+https://hn.werick.codes/how-to-host-your-node-app-in-a-docker-container-on-heroku-cjwzf5w6q000r3ws1p647ks7m
 
 ## Deployment to Heroku:
 This repo has actions that deploys changes to Heroku when the `master` branch is updated.
