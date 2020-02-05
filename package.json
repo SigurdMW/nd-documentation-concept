@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "make:pdfs": "node ./src/md-to-pdf.js",
     "start": "node ./src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,7 +20,11 @@
   },
   "homepage": "https://github.com/SigurdMW/nd-documentation-concept#readme",
   "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
     "express": "^4.17.1",
     "md-to-pdf": "^3.0.0-pre.1"
+  },
+  "devDependencies": {
+    "colors": "^1.4.0"
   }
 }
