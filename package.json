@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "make:pdfs": "node ./src/md-to-pdf.js",
-    "start": "node ./src/index.js",
+	"start:dev": "nodemon ./src/index.js",
+    "make:pdfs": "node ./scripts/build.js",
+    "start": "npm run make:pdfs && node ./src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,9 +23,11 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
     "express": "^4.17.1",
+    "helmet": "^3.21.2",
     "md-to-pdf": "^3.0.0-pre.1"
   },
   "devDependencies": {
-    "colors": "^1.4.0"
+    "colors": "^1.4.0",
+    "nodemon": "^2.0.2"
   }
 }
