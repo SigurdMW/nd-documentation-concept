@@ -1,4 +1,4 @@
-FROM node:carbon
+FROM node:12
 
 # Set the working directory to /app
 WORKDIR /

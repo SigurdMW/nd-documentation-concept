@@ -5,6 +5,7 @@ const makeHTML = require("./md-to-html")
 const makeJSON = require("./md-to-json")
 const rimraf = require("rimraf")
 require("colors")
+const { exec } = require("child_process")
 
 const docsPath = path.resolve(__dirname, "../docs")
 const publicPath = path.resolve(__dirname, "../public")
@@ -24,6 +25,12 @@ const deleteFolder = (path) => new Promise((res, rej) => {
 
 const run = async () => {
 	try {
+		exec("ls", (err, stdout, stderr) => {
+			if (err) {
+				throw new Error("LS command did not work")
+			}
+			console.log(stdout)
+		})
 		await deleteFolder(distPath)
 		await fs.mkdir(distPath)
 		const allProductDocsDirs = await fs.readdir(docsPath)
